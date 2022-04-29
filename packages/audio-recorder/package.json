@@ -38,7 +38,7 @@
   "bugs": {
     "url": "https://github.com/1710797241/yiyi-js/issues"
   },
-  "homepage": "https://github.com/1710797241/yiyi-js/tree/master/packages/webSocket",
+  "homepage": "https://github.com/1710797241/yiyi-js/tree/1.0.0/packages/audio-recorder",
   "author": "yiyi",
   "license": "MIT",
   "devDependencies": {
