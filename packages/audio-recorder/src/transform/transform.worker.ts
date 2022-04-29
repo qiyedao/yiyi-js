@@ -1,8 +1,15 @@
+import { WORKER_SOURCE } from "src/constants/types";
+
 const lamejs = require("lamejstmp");
 const _self: Worker = self as any;
 _self.onmessage = function (e) {
     console.log("边录制边转", e);
-    let { audioData, config } = e.data;
+    let { payload, source } = e.data;
+    if (source !== WORKER_SOURCE) {
+        return;
+    }
+
+    let { audioData, config } = payload;
     let compressData = compress(
         audioData,
         config.inputSampleRate,
@@ -14,7 +21,12 @@ _self.onmessage = function (e) {
         config.oututSampleBits,
         config.littleEdian
     );
-    _self.postMessage({ pcm });
+    _self.postMessage({
+        source: WORKER_SOURCE,
+        payload: {
+            pcm,
+        },
+    });
 };
 interface dataview {
     byteLength: number;

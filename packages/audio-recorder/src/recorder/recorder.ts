@@ -1,3 +1,4 @@
+import { WORKER_SOURCE } from "src/constants/types";
 import { compress, encodePCM, encodeWAV } from "../transform/transform";
 import transWorker from "../transform/transform.worker";
 declare let window: any;
@@ -73,7 +74,11 @@ export default class Recorder {
 
             this.currentWorker.onmessage = (e: any) => {
                 // 边录边转处理
-                let { pcm } = e.data;
+                let { source, payload } = e.data;
+                if (source !== WORKER_SOURCE) {
+                    return;
+                }
+                let { pcm } = payload;
                 console.log("得到的数据", pcm);
 
                 this.tempPCM.push(pcm);
@@ -370,12 +375,15 @@ export default class Recorder {
 
             if (this.isWorker) {
                 this.currentWorker.postMessage({
-                    audioData: this.flat(
-                        currentLeftBuffer,
-                        currentRightBuffer,
-                        currentDataSize
-                    ),
-                    config,
+                    source: WORKER_SOURCE,
+                    payload: {
+                        audioData: this.flat(
+                            currentLeftBuffer,
+                            currentRightBuffer,
+                            currentDataSize
+                        ),
+                        config,
+                    },
                 });
             }
 
