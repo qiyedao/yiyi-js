@@ -1,5 +1,5 @@
 {
-  "name": "yiyi-audio-recoder",
+  "name": "yiyi-audio-recorder",
   "version": "1.0.0",
   "description": "js audio recorder plugin",
   "main": "./index.js",

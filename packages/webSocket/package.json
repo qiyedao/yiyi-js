@@ -1,6 +1,6 @@
 {
   "name": "yiyi-websocket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "js 常用工具库 webSocket ",
   "main": "index.js",
   "scripts": {

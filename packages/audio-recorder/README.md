@@ -40,13 +40,13 @@ npm run build
 安装：
 
 ```
-npm i yiyi-audio-recoder
+npm i yiyi-audio-recorder
 ```
 
 调用：
 
 ```js
-import Recorder from "yiyi-audio-recoder";
+import Recorder from "yiyi-audio-recorder";
 
 let recorder = new Recorder();
 ```
