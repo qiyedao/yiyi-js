@@ -27,7 +27,7 @@ let config = {
                 use: { loader: "worker-loader" },
             },
             {
-                test: /\.(tsx|ts)?$/,
+                test: /\.tsx?$/,
                 use: "ts-loader",
                 exclude: /node_modules/,
             },

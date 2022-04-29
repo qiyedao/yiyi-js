@@ -9,7 +9,7 @@ import {
     Segment,
 } from "semantic-ui-react";
 
-// import Recorder from "../src/recorder/recorder";
+// import Recorder from "../src/";
 import Recorder from "../dist/recorder";
 
 const lamejs = require("lamejstmp");
@@ -208,6 +208,8 @@ class App extends React.Component {
         } else {
             recorder.stop();
         }
+        console.log(recorder,'vrecorder');
+        
 
         recorder.start({ worker: true }).then(
             (res) => {
