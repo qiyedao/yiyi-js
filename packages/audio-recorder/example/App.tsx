@@ -9,7 +9,9 @@ import {
     Segment,
 } from "semantic-ui-react";
 
-import Recorder from "../src/recorder/recorder";
+// import Recorder from "../src/recorder/recorder";
+import Recorder from "../dist/recorder";
+
 const lamejs = require("lamejstmp");
 
 import { encodeWAV } from "../src/transform/transform";
