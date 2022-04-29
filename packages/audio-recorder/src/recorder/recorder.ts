@@ -1,4 +1,4 @@
-import { WORKER_SOURCE } from "src/constants/types";
+import { WORKER_SOURCE } from "../constants/config";
 import { compress, encodePCM, encodeWAV } from "../transform/transform";
 import transWorker from "../transform/transform.worker";
 declare let window: any;

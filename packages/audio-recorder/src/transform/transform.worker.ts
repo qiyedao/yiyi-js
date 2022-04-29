@@ -1,4 +1,4 @@
-import { WORKER_SOURCE } from "src/constants/types";
+import { WORKER_SOURCE } from "../constants/config";
 
 const lamejs = require("lamejstmp");
 const _self: Worker = self as any;
