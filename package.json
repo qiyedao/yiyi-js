@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "js 常用工具库 webSocket ",
   "main": "index.js",
+ 
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +16,6 @@
   },
   "homepage": "https://github.com/1710797241/yiyi-js",
   "author": "yiyi",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {}
 }

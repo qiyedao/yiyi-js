@@ -16,10 +16,10 @@
   "homepage": "https://github.com/1710797241/yiyi-js/tree/master/packages/webSocket",
   "author": "yiyi",
   "license": "MIT",
-  "directories": {
-    "example": "example",
-    "lib": "lib"
-  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
   "keywords": [
     "webSocket"
   ]
