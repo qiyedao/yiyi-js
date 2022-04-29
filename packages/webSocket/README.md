@@ -1,11 +1,11 @@
 ## 安装依赖
 
-npm install yiyi-socket
+npm install yiyi-websocket
 
 ## 导入依赖
 
 ```js
-import Socket from 'yiyi-socket';
+import Socket from 'yiyi-websocket';
 
 const socket = new Socket({ url: 'ws://localhost:8080' });
 
