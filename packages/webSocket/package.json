@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/1710797241/yiyi-js/tree/master/packages/webSocket",
   "author": "yiyi",
-  "license": "ISC",
+  "license": "MIT",
   "directories": {
     "example": "example",
     "lib": "lib"
