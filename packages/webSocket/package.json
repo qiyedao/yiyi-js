@@ -1,5 +1,5 @@
 {
-  "name": "react-yiyi-websocket",
+  "name": "yiyi-websocket",
   "version": "1.0.0",
   "description": "js 常用工具库 webSocket ",
   "main": "index.js",
@@ -13,7 +13,14 @@
   "bugs": {
     "url": "https://github.com/1710797241/yiyi-js/issues"
   },
-  "homepage": "https://github.com/1710797241/yiyi-js",
+  "homepage": "https://github.com/1710797241/yiyi-js/tree/master/packages/webSocket",
   "author": "yiyi",
-  "license": "ISC"
+  "license": "ISC",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "keywords": [
+    "webSocket"
+  ]
 }
