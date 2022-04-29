@@ -339,9 +339,9 @@ class Index extends Recorder {
      * @memberof Recorder
      */
     downloadMP3(name: string = "recorder"): void {
-        let wavBlob = this.getMP3Blob();
+        let mp3Blob = this.getMP3Blob();
 
-        download(wavBlob, name, "mp3");
+        download(mp3Blob, name, "mp3");
     }
 
     /**

@@ -3,7 +3,6 @@ import { WORKER_SOURCE } from "../constants/config";
 const lamejs = require("lamejstmp");
 const _self: Worker = self as any;
 _self.onmessage = function (e) {
-    console.log("边录制边转", e);
     let { payload, source } = e.data;
     if (source !== WORKER_SOURCE) {
         return;
@@ -15,7 +14,6 @@ _self.onmessage = function (e) {
         config.inputSampleRate,
         config.outputSampleRate
     );
-    console.log("compressData", compressData);
     let pcm = encodePCM(
         compressData,
         config.oututSampleBits,

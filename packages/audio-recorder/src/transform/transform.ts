@@ -104,7 +104,7 @@ export function encodePCM(
         for (let i = 0; i < bytes.length; i++, offset += 2) {
             let s = Math.max(-1, Math.min(1, bytes[i]));
             // 16位的划分的是2^16=65536份，范围是-32768到32767
-            // console.log('data',data,offset)
+           
 
             // 因为我们收集的数据范围在[-1,1]，那么你想转换成16位的话，只需要对负数*32768,对正数*32767,即可得到范围在[-32768,32767]的数据。
             data.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7fff, littleEdian);

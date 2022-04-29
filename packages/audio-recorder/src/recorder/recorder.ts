@@ -70,7 +70,7 @@ export default class Recorder {
         if (options.compiling) {
             this.isWorker = options.compiling;
             this.currentWorker = new transWorker();
-            console.log("启用worker");
+           
 
             this.currentWorker.onmessage = (e: any) => {
                 // 边录边转处理
@@ -79,10 +79,9 @@ export default class Recorder {
                     return;
                 }
                 let { pcm } = payload;
-                console.log("得到的数据", pcm);
+                
 
                 this.tempPCM.push(pcm);
-                console.log("多个音频片段待合并", this.tempPCM);
                 // 计算录音大小
                 this.fileSize = pcm.byteLength * this.tempPCM.length;
             };
@@ -233,6 +232,7 @@ export default class Recorder {
         this.size = 0;
         this.fileSize = 0;
         this.PCM = null;
+        this.tempPCM = [];
         this.audioInput = null;
         this.duration = 0;
     }
@@ -244,22 +244,21 @@ export default class Recorder {
      * @returns  {float32array}     音频pcm二进制数据
      * @memberof Recorder
      */
-    private flat(
+     private flat(
         lBuffer: Array<Float32Array> = [],
         rBuffer: Array<Float32Array> = [],
         size: number = 0
     ) {
         if (size) {
-            console.log("二维转一维度");
+           
             let lData = null,
                 rData = new Float32Array(0); // 右声道默认为0
-
             // 创建存放数据的容器
             if (1 === this.config.numChannels) {
-                lData = new Float32Array(this.size);
+                lData = new Float32Array(size);
             } else {
-                lData = new Float32Array(this.size / 2);
-                rData = new Float32Array(this.size / 2);
+                lData = new Float32Array(size / 2);
+                rData = new Float32Array(size / 2);
             }
             // 合并
             let offset = 0; // 偏移量计算
@@ -277,6 +276,7 @@ export default class Recorder {
                 rData.set(rBuffer[i], offset);
                 offset += rBuffer[i].length;
             }
+            
 
             return {
                 left: lData,
@@ -316,7 +316,6 @@ export default class Recorder {
             };
         }
     }
-
     /**
      * 初始化录音实例
      */
@@ -357,7 +356,6 @@ export default class Recorder {
             currentLeftBuffer.push(new Float32Array(lData));
             let currentRightBuffer: Array<Float32Array> = [];
             this.size += lData.length;
-            // console.log(e, "音频采集e", lData);
             // 判断是否有右声道数据
             if (2 === this.config.numChannels) {
                 rData = e.inputBuffer.getChannelData(1);

@@ -1,17 +1,10 @@
 const _self: Worker = self as any;
 _self.onmessage = function (e) {
-    // transAudioData.transcode(e.data);
-    console.log(e, "receive from user onmessage");
-    transAudioData.logInfo(e);
+    transAudioData.transcode(e.data);
 };
 
 let transAudioData = {
-    logInfo(data) {
-        console.log("loginfo", data);
-        _self.postMessage({
-            type: "send from worker.js",
-        });
-    },
+   
     transcode(audioData) {
         let output: any = transAudioData.to16kHz(audioData);
         output = transAudioData.to16BitPCM(output);
