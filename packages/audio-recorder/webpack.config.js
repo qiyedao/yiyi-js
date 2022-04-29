@@ -15,14 +15,14 @@ let config = {
     },
     output: {
         // 输出文件名
-        //filename: '[name].js',
+        // filename: "[name].js",
         filename: (chunkData) => {
             // 文件名小写
             return `${firstLower(chunkData.chunk.name)}.js`;
         },
         // 输出路径
         path: path.resolve(__dirname, "dist"),
-        libraryExport: "default",
+        // libraryExport: "default",//由于使用了worker.ts  不能这样配置
         library: "[name]",
         globalObject: "this",
         libraryTarget: "umd",
@@ -31,7 +31,7 @@ let config = {
         unknownContextCritical: false,
         rules: [
             {
-                test: /\.worker\.js$/,
+                test: /\.worker\.(ts|js)$/,
                 use: { loader: "worker-loader" },
             },
             {
@@ -51,7 +51,7 @@ ${package.name} - ${package.description}
 
 @version v${package.version}
 @homepage ${package.homepage}
-@author ${package.author} <echoweb@126.com> (https://www.zhuyuntao.cn)
+@author ${package.author}
 @license ${package.license}
         `),
         new CleanWebpackPlugin(),

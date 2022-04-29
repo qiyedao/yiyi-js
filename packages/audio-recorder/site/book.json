@@ -2,14 +2,14 @@
     "title": "recorder",
     "description": "recorder",
     "gitbook": "3.2.3",
-    "links" : {
-        "sidebar" : {
-            "Home" : "https://github.com/2fps/recorder"
+    "links": {
+        "sidebar": {
+            "Home": "https://github.com/1710797241/yiyi-js"
         }
     },
     "plugins": [
-        "-lunr", 
-        "-search", 
+        "-lunr",
+        "-search",
         "search-pro",
         "back-to-top-button",
         "expandable-chapters-small",
@@ -20,13 +20,13 @@
         "page-toc-button",
         "pageview-count",
         "popup"
-   ],
-   "pluginsConfig": {
+    ],
+    "pluginsConfig": {
         "github": {
-            "url": "https://github.com/2fps/recorder"
+            "url": "https://github.com/1710797241/yiyi-js"
         },
         "tbfed-pagefooter": {
-            "copyright":"Copyright & copy https://www.zhuyuntao.cn 2019",
+            "copyright": "Copyright & copy https://www.zhuyuntao.cn 2019",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
@@ -37,5 +37,5 @@
         "baidu-tongji": {
             "token": "8a92d7c6f8fa1707579944211d49b410"
         }
-   }
+    }
 }

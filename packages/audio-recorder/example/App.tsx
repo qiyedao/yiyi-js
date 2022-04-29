@@ -9,7 +9,7 @@ import {
     Segment,
 } from "semantic-ui-react";
 
-import Recorder from "../src/index";
+import Recorder from "../src/recorder/recorder";
 const lamejs = require("lamejstmp");
 
 import { encodeWAV } from "../src/transform/transform";
@@ -123,7 +123,7 @@ class App extends React.Component {
                 // this.setState({
                 //     duration: duration.toFixed(5),
                 // });
-                // 推荐使用 onprogress
+                // 推荐使用onprogress
             };
 
             recorder.onprogress = (params) => {
@@ -642,14 +642,13 @@ class App extends React.Component {
                     />
                 </div>
                 <Divider />
-                <h3>应用</h3>
-                <Translate />
+
             </Container>
         );
     }
 }
 
-// https://github.com/2fps/recorder/issues/33 支持mp3
+
 // 请用 16位的采样位数
 function convertToMp3(wavDataView) {
     // 获取wav头信息

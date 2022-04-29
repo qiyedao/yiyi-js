@@ -301,7 +301,7 @@ Recorder.playAudio(/* 放入blob数据 */);
 
 ## 兼容性
 
-> 以下为测试结果，低于以下版本并不表示不支持，可能是未测试到，增加或标注请查看：[issues6](https://github.com/2fps/recorder/issues/6)
+> 以下为测试结果，低于以下版本并不表示不支持，可能是未测试
 
 ### window pc 端
 

@@ -1,14 +1,14 @@
 {
   "name": "yiyi-audio-recorder",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "js audio recorder plugin",
   "main": "./index.js",
   "scripts": {
     "dev": "npm run start",
-    "start": "webpack-dev-server --watch --inline --mode=development --config webpack.dev.js",
+    "start": "webpack-dev-server --watch --inline --mode=development --progress --config webpack.dev.js",
     "demo": "webpack --mode=production --config webpack.dev.js",
     "https": "webpack-dev-server --https --open --watch --inline --mode=development --host --config webpack.dev.js",
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=production --progress",
     "test": "jest",
     "gitbook": "gitbook serve ./site",
     "gitbook:build": "gitbook build ./site",
