@@ -33,6 +33,8 @@ export default class Recorder {
         duration: number;
         fileSize: number;
         vol: number;
+        e: any;
+        lChannelDataList: Array<Float32Array>;
         lChannelData: any;
         data: Array<DataView>;
     }) => void;

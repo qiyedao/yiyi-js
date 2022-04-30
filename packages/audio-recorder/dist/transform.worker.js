@@ -2,7 +2,7 @@
  * 
  * yiyi-audio-recorder - js audio recorder plugin
  * 
- * @version v1.0.6
+ * @version v1.0.7
  * @homepage https://github.com/1710797241/yiyi-js/tree/1.0.0/packages/audio-recorder
  * @author yiyi
  * @license MIT
