@@ -9,8 +9,8 @@ import {
     Segment,
 } from "semantic-ui-react";
 
-// import Recorder from "../src/";
-import Recorder from "../dist/recorder";
+import Recorder from "../src/";
+// import Recorder from "../dist/recorder";
 
 const lamejs = require("lamejstmp");
 

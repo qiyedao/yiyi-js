@@ -45,6 +45,8 @@ export default class Recorder {
         duration: number;
         fileSize: number;
         vol: number;
+        e:any,
+        lChannelDataList:Array<Float32Array>;
         lChannelData: any;
         data: Array<DataView>; // 当前存储的所有录音数据
     }) => void;
@@ -233,6 +235,7 @@ export default class Recorder {
         this.fileSize = 0;
         this.PCM = null;
         this.tempPCM = [];
+        this.lChannelData = []
         this.audioInput = null;
         this.duration = 0;
     }
@@ -419,10 +422,13 @@ export default class Recorder {
             // 录音时长及响度回调
             this.onprogress &&
                 this.onprogress({
+                    
                     duration: this.duration,
                     fileSize: this.fileSize,
                     vol,
-                    lChannelData: this.lChannelData,
+                    e:e,
+                    lChannelData:lData,
+                    lChannelDataList: this.lChannelData,
                     data: this.tempPCM, // 当前所有的pcm数据，调用者控制增量
                 });
         };
