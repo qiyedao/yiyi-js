@@ -20,7 +20,6 @@ interface recorderConfig {
     numChannels?: number; // 声道数
     compiling?: boolean; // 是否边录边播
 }
-
 class Index extends Recorder {
     private isrecording: boolean = false; // 是否正在录音
     private ispause: boolean = false; // 是否是暂停

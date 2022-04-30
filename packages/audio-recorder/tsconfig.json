@@ -5,7 +5,7 @@
         "target": "es6",
         "baseUrl": "./",
         "declaration": true, //Generates corresponding d.ts files.
-        "lib": ["WebWorker", "ScriptHost","es6", "dom"],//
+        "lib": ["es6", "dom"],//
         "jsx": "react",
         // "allowJs": true,
         "allowSyntheticDefaultImports": true
