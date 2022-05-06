@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/constant.js"],
+  "sourcesContent": ["const mimeType = {\n    doc: 'application/msword',\n    docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',\n    ppt: 'application/vnd.ms-powerpoint',\n    pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',\n    xls: 'application/vnd.ms-excel',\n    xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',\n    pdf: 'application/pdf',\n    zip: 'application/x-zip-compressed',\n    txt: 'text/plain',\n    png: 'image/png',\n    jpg: 'image/jpeg',\n    gif: 'image/gif',\n    mp4: 'video/mp4',\n    avi: 'video/avi',\n    mp3: 'audio/mpeg',\n    wav: 'audio/wav',\n};\nexport { mimeType };\n"],
+  "mappings": ";AAAA,IAAM,WAAW;AAAA,EACb,KAAK;AAAA,EACL,MAAM;AAAA,EACN,KAAK;AAAA,EACL,MAAM;AAAA,EACN,KAAK;AAAA,EACL,MAAM;AAAA,EACN,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AAAA,EACL,KAAK;AACT;",
+  "names": []
+}

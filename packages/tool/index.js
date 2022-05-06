@@ -1,3 +1,1 @@
-import { mimeType } from './constant';
-
-export { mimeType };
+export * from './src/constant.js';
