@@ -1,14 +1,19 @@
 {
-  "name": "tool",
-  "version": "1.0.0",
+  "name": "yiyi-tool",
+  "version": "1.0.1",
   "description": "常用工具",
   "main": "index.js",
-  "files": [],
+  "files": [
+    "lib",
+    "dist",
+    "es"
+  ],
   "scripts": {
     "build": "node ./build/build.js",
     "build:lib": "node ./build/build.js --format=cjs --out=lib",
     "build:es": "node ./build/build.js --format=esm --out=es",
     "build:dist": "node ./build/build.js --format=cjs --out=dist",
+    "publish": "npm publish",
     "test": "node index.test.js"
   },
   "keywords": [
