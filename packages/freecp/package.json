@@ -1,0 +1,32 @@
+{
+  "name": "freecp",
+  "version": "1.0.3",
+  "description": "node",
+  "bin": {
+    "freecp": "./bin/freecp.js"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js",
+    "bin",
+    "dist"
+  ],
+  "keywords": [
+    "node"
+  ],
+  "author": "yiyi",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^9.2.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^8.2.4",
+    "yargs": "^17.4.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.14.38"
+  }
+}
