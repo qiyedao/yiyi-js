@@ -1,6 +1,6 @@
 {
   "name": "freecp",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node",
   "bin": {
     "freecp": "./bin/freecp.js"
