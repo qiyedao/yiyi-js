@@ -19,6 +19,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // index.js
 var tool_exports = {};
 __export(tool_exports, {
+  getExtNameList: () => getExtNameList,
   mimeType: () => mimeType
 });
 module.exports = __toCommonJS(tool_exports);
@@ -42,8 +43,12 @@ var mimeType = {
   mp3: "audio/mpeg",
   wav: "audio/wav"
 };
+var getExtNameList = () => {
+  return Object.keys(mimeType);
+};
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  getExtNameList,
   mimeType
 });
 //# sourceMappingURL=index.js.map

@@ -5,7 +5,7 @@ const chalk = require('chalk');
 const pkg = require('../package.json');
 const { checkFile } = require('../index');
 program
-    .command('g')
+    // .command('g')
     .version(pkg.version)
     .description('cp file to dir and rename or cp dir ,if exists override')
     .usage(`${chalk.green('<origin-path dest-path >')} [options]`)

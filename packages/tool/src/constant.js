@@ -16,4 +16,7 @@ const mimeType = {
     mp3: 'audio/mpeg',
     wav: 'audio/wav',
 };
-export { mimeType };
+const getExtNameList = () => {
+    return Object.keys(mimeType);
+};
+export { mimeType, getExtNameList };

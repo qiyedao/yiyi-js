@@ -7,18 +7,14 @@ console.log('argv', argv);
 if (!argv.format) {
     buildAll();
 } else {
-    if (argv.out == 'dist') {
-        buildDist(argv.format, argv.out || 'dist');
-    } else {
-        buildFormat(argv.format, argv.out || 'dist');
-    }
+    buildFormat(argv.format || 'cjs', argv.out || 'dist');
 }
 function buildAll() {
     const { result } = concurrently(
         [
             { name: 'build:cjs', command: 'node build/build --format=cjs --out=lib' },
             { name: 'build:esm', command: 'node build/build --format=esm --out=es' },
-            // { name: 'build:cli', command: 'node build/build' },
+            { name: 'build:cli', command: 'node build/build --format=iife --out=dist' },
         ],
         {
             prefix: 'name',

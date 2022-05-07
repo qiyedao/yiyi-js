@@ -17,7 +17,11 @@ var mimeType = {
   mp3: "audio/mpeg",
   wav: "audio/wav"
 };
+var getExtNameList = () => {
+  return Object.keys(mimeType);
+};
 export {
+  getExtNameList,
   mimeType
 };
 //# sourceMappingURL=index.js.map
